@@ -1,0 +1,2 @@
+- Django Channels with daphne add on
+python -m pip install -U 'channels[daphne]'

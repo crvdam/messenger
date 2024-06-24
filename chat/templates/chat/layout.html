@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chat</title>
+        <link href="{% static 'chat.css' %}" rel="stylesheet">
+        <script src="{% static 'chat.js' %}"></script>
+        
+    </head>
+    <body>
+        <div id="container-main">
+                {% block body %}
+                {% endblock %}
+        </div>
+    </body>
+</html>

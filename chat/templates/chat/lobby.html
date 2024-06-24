@@ -1,0 +1,44 @@
+{% extends "chat/layout.html" %}
+
+{% block body %}
+    {{ request.user.username|json_script:"current_user" }}
+    <div id="container-friends">
+        <div id="user-header">
+            {% if request.user.is_authenticated %}
+                <div id="user-header-l">
+                    <img class="profile-picture" src="{{ request.user.profile_picture }}">
+                </div>
+                <div id="user-header-r">
+                    <span>logged in as <strong>{{ request.user.username }}</strong></span>
+                    <span id="logout"><strong><a href="{% url 'logout' %}">Logout</a></strong></span>
+                </div>
+            {% endif %}
+        </div> 
+        <div id="add-friend">
+            <input id="add-friend-input" name="friend" type="text" placeholder="Add Friend">
+            <button id="add-friend-submit" type="submit">&#65291;</button><br>
+            <div class="friend-error"></div>
+
+        </div>
+
+        <div id="container-friends-buttons">
+        </div>
+    </div>
+
+    <div id="container-chat">
+        <div id="chat-header">
+            <div id="active-friend">
+            </div>
+        </div>   
+
+        <div id="chat-window">
+        </div>  
+
+        <div id="chat-footer">
+            <div>
+                <input autofocus id="chat-form-text" type="text" placeholder="Your message">  
+                <input style="display:none;" id="chat-form-submit" type="submit">
+            </div>
+    </div>
+{% endblock %}
+
