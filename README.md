@@ -1,13 +1,20 @@
-# Chat app with Django Channels
-A single-page chat application.
+# Messenger
+
+### Features
+- Single page application
+- User authentication
+- Friends list
+- New message alert
+- Communication via WebSockets 
 
 ### Requirements
 Django Channels
 python -m pip install -U 'channels[daphne]'
 
-### Technologies
-- Python Django
-- Django Channels
-- Javascript
+### Tech
+- Django back-end
+- Javascript front-end
+- Django Channels / WebSockets
+- API calls
 
 ![](image.png)
