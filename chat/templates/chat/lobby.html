@@ -1,51 +1,51 @@
-{% extends "chat/layout.html" %} 
-{% block body %} 
-{{ request.user.username|json_script:"current_user" }}
+{% extends "chat/layout.html" %} {% block body %}
+{{request.user.username|json_script:"current_user"}}
 
-<div class="sidebar-container">
-
-  <div class="current-user">
-    {% if request.user.is_authenticated %}
-    <img class="current-user__image" src="{{ request.user.profile_picture }}" />
-    <p class="current-user__name">{{ request.user.username }}</span>
-    <p class="current-user__logout">
+<div class="lobby">
+  <div class="sidebar-container">
+    <div class="current-user">
+      {% if request.user.is_authenticated %}
+      <img
+        class="current-user__image"
+        src="{{ request.user.profile_picture }}"
+      />
+      <p class="current-user__name">{{ request.user.username }}</p>
+      <p class="current-user__logout">
         <a href="{% url 'logout' %}">Logout</a>
-    </p>
-    {% endif %}
-  </div>
-  
-    <div class="add-friend">
-        <input
-          class="add-friend__input"
-          name="friend"
-          type="text"
-          placeholder="Add Friend"
-        />
-        <button class="add-friend__submit" type="submit">&#65291;</button>
-        <div class="add-friend__error"></div>
+      </p>
+      {% endif %}
     </div>
+
+    <div class="add-friend">
+      <input
+        class="add-friend__input"
+        name="friend"
+        type="text"
+        placeholder="Add Friend"
+      />
+      <button class="add-friend__submit" type="submit">&#65291;</button>
+      <p class="add-friend__error"></p>
+    </div>
+
+    <div class="sidebar__friends"></div>
   </div>
 
-  <div class="sidebar__friends"></div>
-</div>
+  <div class="chat-container">
+    <div class="chat__header">
+      <h2 class="header__name"></h2>
+    </div>
 
-<div class="chat-container">
-  <div class="chat__header">
-    <h2 class="header__name"></div>
-  </div>
+    <div class="chat__window"></div>
 
-  <div class="chat__window"></div>
-
-  <div class="chat__footer">
-    <div>
+    <div class="chat__footer">
       <input
         autofocus
         class="footer__input"
         type="text"
         placeholder="Your message"
       />
-      <input class="footer__submit" style="display: none"  type="submit" />
+      <input class="footer__submit" style="display: none" type="submit" />
     </div>
   </div>
-  {% endblock %}
 </div>
+{% endblock %}
