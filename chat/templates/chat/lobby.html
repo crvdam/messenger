@@ -9,21 +9,25 @@
         class="current-user__image"
         src="{{ request.user.profile_picture }}"
       />
-      <p class="current-user__name">{{ request.user.username }}</p>
-      <p class="current-user__logout">
-        <a href="{% url 'logout' %}">Logout</a>
-      </p>
+      <div class="name-logout-wrapper">
+        <p class="current-user__name">{{ request.user.username }}</p>
+        <p class="current-user__logout">
+          <a href="{% url 'logout' %}">log out</a>
+        </p>
+      </div>
       {% endif %}
     </div>
 
     <div class="add-friend">
-      <input
-        class="add-friend__input"
-        name="friend"
-        type="text"
-        placeholder="Add Friend"
-      />
-      <button class="add-friend__submit" type="submit">&#65291;</button>
+      <div class="add-friend-wrapper">
+        <input
+          class="add-friend__input"
+          name="friend"
+          type="text"
+          placeholder="Add Friend"
+        />
+        <button class="add-friend__submit" type="submit">+</button>
+      </div>
       <p class="add-friend__error"></p>
     </div>
 
