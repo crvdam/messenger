@@ -9,189 +9,87 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    --bg-clr-1: black;
-    --bg-clr-2: grey;
-    --text-clr-1: white;
-    --text-clr-2: blue; 
+    --bg-1: #1d1716;
+    --bg-2: #222831;
+    --bg-3: #22313f;
+    --bg-4: #1e549f;
+    --bubble-1: #393e46;
+    --bubble-2: #1e549f;
+    --text-1: #eeeeee;
+    --text-2: #c8ccd3; 
+    --text-3: #1e549f;
 }
 
 body {
-    color: var(--text-clr-1);
-    background-color: var(--bg-clr-1);
+    color: var(--text-1);
+    background-color: var(--bg-1);
 }
 
 input {
     padding: 0.5rem 1rem;
-}
-#chat-form-text {
-    background: #2a3942;
-}
-
-img {
-    object-fit: contain;
-    max-height: 100%;   
-}
-
-#container-friends {
-    float: left; 
-    height: 100%;
-    width: 30%;
-}
-
-#user-header {
-    height: 10%;
-    font-size: x-small;
-    display: flex;
-}
-
-#user-header-l {
-    width: 15%;
-}
-
-#user-header-r {
-    margin-left: 10px;
-}
-
-#add-friend {
-    height: 15%;
-    background: #111b21;
-    text-align: center;
-}
-
-#add-friend-submit {
-    color: #e9edefe1;
-    background: #222e35;
-    border-radius: 4px;
+    font-family: inherit;
+    background-color: var(--bg-2);
+    color: inherit;
     border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
 }
 
-#add-friend-submit:hover {
-    background: #111b21;
-    transition: 0.1s;
+input[type="text"]:hover, input[type="password"]:hover {
+  background-color: var(--bg-3);
+  transition: 0.2s;
 }
 
-#container-friends-buttons {
-    height: 80%;
-    background: #111b21;
-    overflow-y: auto;
+input[type="text"]:focus {
+  background-color: var(--bg-3);
+  transition: 0.2s;
 }
 
-.friend-button, .friend-button-new-message {
-    width: 100%;
-    height: 15%;
-    position: relative;
+input[type="submit"]:hover {
+  background-color: var(--bg-4);
+  transition: 0.2s;
 }
 
-.friend-button > div, .friend-button-new-message > div {
-    position: absolute;
-}
-
-.friend-profile-picture {
-    height: 50px;
-    width: 50px;
-    justify-self: left;
+input[type="submit"]:active {
+  background-color: var(--text-1);
 }
 
 img {
-    border-radius: 50%;
+    height: 30px;
+    width: 30px;
     object-fit: cover;
-    height: 50px;
-    width: 50px;
-
 }
 
-.last-message, .last-message-timestamp {
-    color: #e9edefa2;
-    font-size: smaller;
-    text-align: right;
-    padding-top: 0px;
-    padding-bottom: 15px;
-    font-size: small;
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-2);
+  color: var(--text-1);
 }
 
-.friend-name {
-    top: 0;
-    left: 20%;
-}
-.last-message {
-    top: 25%;
-    left: 25%;
+button:hover {
+  background-color: var(--bg-1);
 }
 
-.last-message-timestamp {
-    top: 0;
-    right: 2%;
+a {
+  cursor: pointer;
 }
 
-.friend-button:hover, .friend-button-new-message:hover {
-    background: #222e35;
+a:visited {
+  color: inherit;
 }
 
-.friend-button-new-message {
-    background: #005c4b;
-}
-
-.friend-button-active-friend {
-    background: #222e35;
-}
-
-#active-friend {
-    padding: 2% 0 0 3%;
-    font-weight: bolder;
-    font-size: x-large;
-}
-.chat-bubble-timestamp {
-    text-align: right;
-    font-size: small;
-    color: #e9edefa2;
-    padding-top: 5px;
-}
-
-#container-chat {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-left: 1px solid #8696a050;
-}
-
-#chat-header, #chat-footer {
-    height: 10%;
-}
-
-#chat-footer {
-    text-align: center;
-}
-
-#chat-window {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
-#chat-window > div {
-    border-radius: 10px;
-    padding: 10px 15px 10px 15px;
-    font-size: large;  
-    margin-bottom: 10px;
-    overflow-wrap: break-word;
-    justify-content: flex-end;
-    max-width: 40%;
-}
-
-.chat-bubble-friend {
-    align-self: flex-start;
-    position: relative;
-    background: #202c33;
-    max-width: 60%;
-    margin-left: 5%;
-}
-
-.chat-bubble-user {
-    align-self: flex-end;
-    background: #005c4b;
-    max-width: 60%;
-    margin-right: 5%;
+a:hover {
+  color: var(--text-3);
 }
 
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

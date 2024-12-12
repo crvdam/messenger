@@ -1,0 +1,9 @@
+.chat__footer {
+  background-color: var(--bg-1);
+  padding: 0.5rem 1rem;
+  height: 3rem;
+}
+
+.footer__input {
+  width: 25rem;
+}

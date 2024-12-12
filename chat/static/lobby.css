@@ -1,0 +1,26 @@
+.lobby {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar-container {
+  background-color: var(--bg-1);
+  width: 25rem;
+}
+
+/* CHAT CONTAINER */
+.chat-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-1);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+.chat__header {
+  background-color: var(--bg-1);
+  padding: 1rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
